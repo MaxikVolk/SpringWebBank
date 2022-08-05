@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+  <title>My Account</title>
+</head>
+<body>
+
+Name:<span th:text="${user.getName()}">Value</span><br>
+Surname:<span th:text="${user.getSurname()}">Value</span><br>
+BirthDate:<span th:text="${user.getBirthdate()}">Value</span><br>
+Sex:<span th:text="${user.getSex()}">Value</span><br>
+Email:<span th:text="${user.getEmail()}">Value</span>
+
+<form th:method="GET" th:action = "@{/accountMenu/accountMenu}" >
+  <div>
+    <input type="submit" value="Back to Account Menu"/>
+  </div>
+</form>
+<br>
+</body>
+</html>

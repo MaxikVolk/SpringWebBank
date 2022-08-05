@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <title>My Balance</title>
+</head>
+<body>
+
+Your balance:
+<p th:text="${balance}"></p>
+
+<form th:method="GET" th:action = "@{/accountMenu/accountMenu}" >
+    <div>
+        <input type="submit" value="Back to Account Menu"/>
+    </div>
+</form>
+</body>
+</html>

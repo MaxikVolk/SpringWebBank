@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Debit Card</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/accountMenu/newDebitCard}" th:object="${debitCard}">
+    <label for="number">Enter card number: </label>
+    <input type="text" th:field="*{number}" id="number"/>
+    <br/>
+
+    <label for="endDate">Enter end date(yyyy-mm-dd): </label>
+    <input type="text" th:field="*{endDate}" id="endDate"/>
+    <br/>
+
+    <label for="cvv">Enter cvv: </label>
+    <input type="text" th:field="*{cvv}" id="cvv"/>
+    <br/>
+
+    <input type="submit" value="Create!"/>
+</form>
+
+<form th:method="GET" th:action = "@{/accountMenu/accountMenu}" >
+    <div>
+        <input type="submit" value="Back to Account Menu"/>
+    </div>
+</form>
+
+</body>
+</html>

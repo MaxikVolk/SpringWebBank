@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>My Loans</title>
+</head>
+<body>
+
+<div th:each="loan : ${loans}">
+  <p th:text="${loan.toString()}">loan</p>
+</div>
+
+<form th:method="GET" th:action = "@{/accountMenu/accountMenu}" >
+  <div>
+    <input type="submit" value="Back to Account Menu"/>
+  </div>
+</form>
+</body>
+</html>

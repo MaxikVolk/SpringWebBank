@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <title>Account Menu</title>
+</head>
+<body>
+
+<form th:method="GET" th:action = "@{/accountMenu/myAcc}"  >
+    <div>
+        <input type="submit" value="Show my account information"/>
+    </div>
+</form>
+<br>
+
+<form th:method="GET" th:action = "@{/accountMenu/myBal}" >
+    <div>
+        <input type="submit" value="Show my balance"/>
+    </div>
+</form>
+<br>
+
+<form th:method="GET" th:action = "@{/accountMenu/myLoans}" >
+    <div>
+        <input type="submit" value="Show my loans information"/>
+    </div>
+</form>
+<br>
+
+<form th:method="GET" th:action = "@{/accountMenu/newDebitCard}" >
+    <div>
+        <input type="submit" value="Create new Debit Card"/>
+    </div>
+</form>
+<br>
+
+<form th:method="GET" th:action = "@{/accountMenu/newLoan}" >
+    <div>
+        <input type="submit" value="Create new Loan"/>
+    </div>
+</form>
+<br>
+
+<form th:method="POST" th:action = "@{/logout}" >
+    <div>
+        <input type="submit" value="Logout"/>
+    </div>
+</form>
+<br>
+
+</body>
+</html>

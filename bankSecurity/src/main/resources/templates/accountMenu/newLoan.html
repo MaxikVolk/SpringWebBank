@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Loan</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/accountMenu/newLoan}" th:object="${loan}">
+    <label for="Date">Enter date(yyyy-mm-dd): </label>
+    <input type="text" th:field="*{date}" id="Date"/>
+    <br/>
+
+    <label for="summ">Enter summ: </label>
+    <input type="text" th:field="*{sum}" id="summ"/>
+    <br/>
+
+    <label for="percent">Enter percent(without %): </label>
+    <input type="text" th:field="*{perc}" id="percent"/>
+    <br/>
+
+    <label for="period">Enter period: </label>
+    <input type="text" th:field="*{period}" id="period"/>
+    <br/>
+
+    <label for="monthlyPayment">Enter monthly payment: </label>
+    <input type="text" th:field="*{monthlyPayment}" id="monthlyPayment"/>
+    <br/>
+
+    <input type="submit" value="Create!"/>
+</form>
+
+<form th:method="GET" th:action = "@{/accountMenu/accountMenu}" >
+    <div>
+        <input type="submit" value="Back to Account Menu"/>
+    </div>
+</form>
+
+</body>
+</html>
